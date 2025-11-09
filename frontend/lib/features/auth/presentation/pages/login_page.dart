@@ -35,7 +35,6 @@ class _LoginPageState extends State<LoginPage> {
     );
   }
 
-  /// ===== Bloc Listener =====
   void _authListener(BuildContext context, AuthState state) {
     if (state.error != null) {
       _showErrorDialog(state.error!);
@@ -47,7 +46,6 @@ class _LoginPageState extends State<LoginPage> {
     }
   }
 
-  /// ===== Bloc Builder =====
   Widget _authBuilder(BuildContext context, AuthState state) {
     return Scaffold(
       body: HandlingDataRequest(
